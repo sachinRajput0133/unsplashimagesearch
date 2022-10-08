@@ -1,0 +1,24 @@
+.search-wrapper{
+    padding-top:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 200px; */
+
+}
+.input{
+    width: 60%;
+}
+.input >input{
+    width: 100%;
+    padding: 5px;
+}
+/* .input .form{
+    width: 100%;
+} */
+:focus-visible{
+    outline: 0px !important;
+}
+/* ::placeholder{
+    
+} */
