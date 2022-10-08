@@ -70,14 +70,14 @@ const Unsplash = ({ search, setSearch, setProgress }) => {
                       
 
 
-             !images.length&& search? <h2> Result Not Found</h2>: <h2> </h2>
+             !images.length&& search? <h2> Result Not Found</h2>: ( images.length ? <h2>Search Results </h2> : <h2>Search images! </h2>) 
             }
-            {
+            {/* {
                 search && images.length? <h2>Search Results ! </h2>: <h2></h2>
-            }
+            } */}
       </div>
       {!images.length ? (
-        <h2 className="search-info">Search Images!!</h2>
+        <h2 className="search-info"></h2>
       ) : (
         <InfiniteScroll
           dataLength={images.length}
