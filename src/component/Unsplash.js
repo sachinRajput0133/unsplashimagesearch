@@ -13,11 +13,11 @@ const Unsplash = ({ search, setSearch, setProgress }) => {
       `https://api.unsplash.com/search/photos?page=${page}&query=${search}&client_id=rO8-iBqU-fJyACi_ev0qXzjDwxd1VCDkub2hNMWGiLM`
     );
     setProgress(70);
-    console.log(data);
+    // console.log(data);
     setImages(data.results);
     setProgress(100);
     // setTotalImages(data.total)
-    console.log(images);
+    // console.log(images);
   };
   useEffect(() => {
     fetchApi();
@@ -32,7 +32,7 @@ const Unsplash = ({ search, setSearch, setProgress }) => {
       }&query=${search}&client_id=rO8-iBqU-fJyACi_ev0qXzjDwxd1VCDkub2hNMWGiLM`
     );
 
-    console.log(data);
+    // console.log(data);
     setImages(images.concat(data.results));
     setTotalImages(data.total);
   };
@@ -70,7 +70,7 @@ const Unsplash = ({ search, setSearch, setProgress }) => {
                       
 
 
-             !images.length&& search? <h2> Result Not Found</h2>: ( images.length ? <h2>Search Results </h2> : <h2>Search images! </h2>) 
+             !images.length&& search? <h2> Result Not Found</h2>: ( images.length && search ? <h2>Search Results! </h2> : <h2>Search images! </h2>) 
             }
             {/* {
                 search && images.length? <h2>Search Results ! </h2>: <h2></h2>
